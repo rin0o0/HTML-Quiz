@@ -5,6 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz</title>
 </head>
+<style>
+    table,th, td {
+        border: 1px solid;
+        font-family:"Century Gothic";
+    }
+
+    th { 
+        background-color: grey;
+    }
+
+    .main-content {
+        margin-left: auto;
+        margin-right: auto;
+        }
+    
+</style>
+
 <body>
     <header>
         <h1>Quiz</h1>
@@ -28,7 +45,17 @@
         <ol>
             <li>Delivery date filter for an application, that cannot select previous date past today's date.</li>
             <!--ANWER HERE-->
-
+            <br>
+            
+                <form action="submit.php" method="POST">
+                    <fieldset>
+                    <strong><label for="deliveryDate">Delivery Date:</label></strong>
+                    <br>
+                    <input type="date" id="deliveryDate" name="deliveryDate" min="2023-10-02" required>
+                    <input type="submit" value="Submit">
+                    </fieldset>
+                </form>
+            <br>
             <!--END ANWER HERE-->
 
             <li>An input field used to select ONE item from the Southeast Asian nations, with Philippines as initially selected record: (follow the order of nations below)</li>
@@ -46,7 +73,28 @@
                         <li>Vietname</li>
                     </ul>
             <!--ANWER HERE--> 
-            
+            <br>
+            <form action="submit.php" method="POST">
+                <fieldset>
+                    <strong><label for="southeastNation">Select a Southeast Asian nation:</label></strong>
+                    <br>
+                    <select id="southeastNation" name="southeastNation">
+                        <option value="Burma">Burma</option>
+                        <option value="Brunei">Brunei</option>
+                        <option value="Cambodia">Cambodia</option>
+                        <option value="Indonesia">Indonesia</option>
+                        <option value="Laos">Laos</option>
+                        <option value="Malaysia">Malaysia</option>
+                        <option value="Philippines" selected>Philippines</option>
+                        <option value="Singapore">Singapore</option>
+                        <option value="Thailand">Thailand</option>
+                        <option value="Timor-Leste">Timor-Leste</option>
+                        <option value="Vietnam">Vietnam</option>
+                    </select>
+                    <input type="submit" value="Submit">
+                </fieldset>
+            </form>
+            <br>
             <!--END ANWER HERE-->
 
             <li>An input field for ingredients that can select one or more from the list:</li>
@@ -59,17 +107,47 @@
                     <li>Onion</li>
                 </ul>
             <!--ANWER HERE--> 
-            
+            <br>
+            <form action="submit.php" method="POST">
+                <fieldset>
+                    <strong><label for="ingredients">Select ingredients:</label></strong><br>
+                    <label><input type="checkbox" name="FreshCelery" value="yes"> Fresh Celery</label><br>
+                    <label><input type="checkbox" name="SkimMilk" value="yes"> Skim Milk</label><br>
+                    <label><input type="checkbox" name="Turkey Celery" value="yes"> Turkey Celery</label><br>
+                    <label><input type="checkbox" name="Butter" value="yes"> Butter</label><br>
+                    <label><input type="checkbox" name="Carrots" value="yes"> Carrots</label><br>
+                    <label><input type="checkbox" name="Onion" value="yes"> Onion</label><br>
+                    
+                    <input type="submit" value="Submit">
+                </fieldset>
+            </form>
+            <br>
             <!--END ANWER HERE--> 
 
             <li>An input field to select whether a user is an administrator or not? (Boolean)</li>    
-            <!--ANWER HERE--> 
-            
+            <!--ANWER HERE-->
+            <br>
+            <form action="submit.php" method="POST">
+                <fieldset>
+                    <label for="isAdmin">Are you an administrator?</label>
+                    <input type="checkbox" id="isAdmin" name="isAdmin" value="yes">
+                    <input type="submit" value="Submit">
+                </fieldset>
+            </form>
+            <br>
             <!--END ANWER HERE-->  
 
             <li>An input field to upload one or more audio related files(like mp3, wav, ogg, m4a)</li>
             <!--ANWER HERE--> 
-            
+            <br>
+            <form action="submit.php" method="POST" enctype="multipart/form-data">
+                <fieldset> 
+                    <label for="audioFiles">Upload audio files:</label>
+                    <input type="file" id="audioFiles" name="audioFiles" accept=".mp3, .wav, .ogg, .m4a" multiple>
+                    <input type="submit" value="Upload">
+                </fieldset>
+            </form>
+            <br>
             <!--END ANWER HERE-->    
                 
 
@@ -99,9 +177,228 @@
             </tr>
         </table>
         <!--ANWER HERE--> 
-                
+        <br>
+        <table class = "main-content">
+            <thead>
+                <tr>
+                    <th rowspan="2">TIME</th>
+                    <th colspan="6"> Days of The Week</th>
+                </tr>
+                <tr>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                    <th>Saturday</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>7:00-7:30</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td rowspan="10" bgcolor="#aec3b0">Project MGMT</td>
+                    <td></td>
+                    <td rowspan="6"  bgcolor="#577590">RDBMS</td>
+                </tr>
+                <tr>
+                    <td>7:30-8:00</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    
+                    
+                </tr>
+                <tr>
+                    <td>8:00-8:30</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    
+                    
+                </tr>
+                <tr>
+                    <td>8:30-9:00</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>9:00-9:30</td>
+                    <td></td>
+                    <td></td>
+                    <td rowspan="6" bgcolor="#1f7a8c">NETWORK MGMT</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>9:30-10:00</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+    
+                <tr>
+                    <td>10:00-10:30</td>
+                    <td></td>
+                    <td rowspan="4" bgcolor="#1f7a8c">NETWORK MGMT</td>
+                    <td></td>
+                    <td rowspan="6" bgcolor="#277da1">EVENT DRIVEN </td>
+                </tr>
+    
+                <tr>
+                    <td>10:30-11:00</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+    
+                <tr>
+                    <td>11:00-11:30</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+    
+                <tr>
+                    <td>11:30-12:00</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+    
+                <tr>
+                    <td>12:00-12:30</td>
+                    <td rowspan="4"  bgcolor="#577590">RDBMS</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+    
+                <tr>
+                    <td>12:30-13:00</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    
+                </tr>
+    
+                <tr>
+                    <td>13:00-13:30</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td rowspan="5" bgcolor="#90be6d">WEB DEV</td>
+                </tr>
+    
+                <tr>
+                    <td>13:30-14:00</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+    
+                <tr>
+                    <td>14:00-14:30</td>
+                    <td rowspan="4" bgcolor="#277da1">EVENT DRIVEN </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>14:30-15:00</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+    
+                <tr>
+                    <td>15:00-15:30</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+    
+                <tr>
+                    <td>15:30-16:00</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+    
+                <tr>
+                    <td>16:00-16:30</td>
+                    <td rowspan="4" bgcolor="#90be6d">WEB DEV</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+    
+                <tr>
+                    <td>16:30-17:00</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+    
+                <tr>
+                    <td>17:00-17:30</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+    
+                <tr>
+                    <td>17:30-18:00</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    
+                </tr>
+    
+                <tr>
+                    <td>18:00-18:30</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+    
+                <tr>
+                    <td>18:30-19:00</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
         <!--END ANWER HERE-->
     </section>
+    <br>
     
 </body>
 </html>
