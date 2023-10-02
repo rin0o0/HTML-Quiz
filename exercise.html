@@ -130,7 +130,7 @@
             <form action="submit.php" method="POST">
                 <fieldset>
                     <label for="isAdmin">Are you an administrator?</label>
-                    <input type="checkbox" id="isAdmin" name="isAdmin" value="yes">
+                    <input type="checkbox" id="isAdmin" name="isAdmin">
                     <input type="submit" value="Submit">
                 </fieldset>
             </form>
@@ -140,7 +140,7 @@
             <li>An input field to upload one or more audio related files(like mp3, wav, ogg, m4a)</li>
             <!--ANWER HERE--> 
             <br>
-            <form action="submit.php" method="POST" enctype="multipart/form-data">
+            <form action="submit.php" method="POST">
                 <fieldset> 
                     <label for="audioFiles">Upload audio files:</label>
                     <input type="file" id="audioFiles" name="audioFiles" accept=".mp3, .wav, .ogg, .m4a" multiple>
